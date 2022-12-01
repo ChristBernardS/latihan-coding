@@ -30,19 +30,35 @@
 #         break
 # print('Program selesai')
 
-def panjanglebar():
-    panjang = int(input('Masukan Panjang : '))
-    lebar = int(input('Masukan Lebar : '))
-    return panjang,lebar
+# def panjanglebar():
+#     panjang = int(input('Masukan Panjang : '))
+#     lebar = int(input('Masukan Lebar : '))
+#     return panjang,lebar
 
-def luaspersegi(panjang, lebar):
-    return panjang*lebar
+# def luaspersegi(panjang, lebar):
+#     return panjang*lebar
 
-while True:
-    PANJANG, LEBAR = panjanglebar()
-    LUAS = luaspersegi(PANJANG, LEBAR)
-    print(f'Luas = {LUAS}')
-    isContinue = input('Lanjutkan program? (y/n)')
-    if isContinue == 'n':
-        break
-print('program selesai')
+# PANJANG, LEBAR = panjanglebar()
+# LUAS = luaspersegi(PANJANG, LEBAR)
+# print(f'Luas Persegi : {LUAS}')
+
+print('+'*10, 'PROGRAM KONVERSI SUHU', '+'*10, '\n')
+def inputsuhu():
+    celcius = int(input('Masukan Skala Celcius: '))
+    return celcius
+
+def reamur(celcius):
+    return celcius*4/5
+def fahrenhent(celcius):
+    return (celcius*9/5)+32
+def kelvin(celcius):
+    return celcius+273
+
+CELCIUS = inputsuhu()
+SUHUREAMUR = reamur(CELCIUS)
+SUHUFAHRENHEIT = fahrenhent(CELCIUS)
+SUHUKELVIN = kelvin(CELCIUS)
+
+print(f'Hasil Konversi Suhu {CELCIUS} C adalah {SUHUREAMUR} Kelvin')
+print(f'Hasil Konversi Suhu {CELCIUS} C adalah {SUHUFAHRENHEIT} Kelvin')
+print(f'Hasil Konversi Suhu {CELCIUS} C adalah {SUHUKELVIN} Kelvin')
